@@ -9,7 +9,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "InstitutionalUI",
-      fileName: "index",
+      formats: ["es", "umd"],
+      fileName: (format) => `index.${format === "umd" ? "umd.cjs" : "js"}`,
     },
     rollupOptions: {
       external: ["react", "react-dom", "antd"],
