@@ -1,24 +1,31 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
-import { resolve } from "path"
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
+import dts from 'vite-plugin-dts'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+      include: ['src/**/*'],
+    }),
+  ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
-      name: "InstitutionalUI",
-      formats: ["es", "umd"],
-      fileName: (format) => `index.${format === "umd" ? "umd.cjs" : "js"}`,
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'InstitutionalUI',
+      fileName: 'index',
+      formats: ['es'],
     },
     rollupOptions: {
-      external: ["react", "react-dom", "antd"],
+      external: ['react', 'react-dom', 'antd'],
       output: {
         globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          antd: "antd",
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          antd: 'antd',
         },
       },
     },

@@ -12,7 +12,12 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    // Remove or set to false
+    "noEmit": false,
+    // Add these lines
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
     "jsx": "react-jsx",
 
     /* Linting */
