@@ -1,5 +1,12 @@
-import { Modal as AntModal } from "antd"
-import type { ModalProps as AntModalProps } from "antd/es/modal"
+import { Modal as AntdModal, ModalProps as AntdModalProps } from "antd"
+import React from "react"
 
-export type ModalProps = AntModalProps
-export const Modal = AntModal
+// Create a concrete type
+export interface ModalProps extends AntdModalProps {
+  // You can add additional props here if needed
+}
+
+// Create a concrete component
+export const Modal: React.FC<ModalProps> = (props) => {
+  return <AntdModal {...props} />
+}

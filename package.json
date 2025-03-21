@@ -18,11 +18,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npx tsc --project tsconfig.json",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "prepare": "npm run build"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "antd": "^5.23.2",
