@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime-D_zvdyIk.js";import{B as a}from"./button-DoNf57hD.js";const r=({children:t,type:e="default",...o})=>s.jsx(a,{type:e,...o,children:t});r.__docgenInfo={description:"",methods:[],displayName:"Button",props:{type:{defaultValue:{value:'"default"',computed:!1},required:!1}}};export{r as B};

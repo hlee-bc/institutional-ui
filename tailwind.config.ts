@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Config } from "tailwindcss"
-import design from "./src/design.json"
+import design from "./lib/design.json"
 
 function flattenObject(
   obj: any,
@@ -19,24 +19,28 @@ function flattenObject(
 }
 
 function FontSize(fontMap: Record<string, any>) {
-  return Object.keys(fontMap).reduce((fsMap, key) => {
-    const fs = fontMap[key]
-    fsMap[key] = [
-      `${fs.fontSize}px`,
-      {
-        lineHeight: `${fs.lineHeight * fs.fontSize}px`,
-        fontWeight: `${fs.fontWeight}`,
-      },
-    ]
-    return fsMap
-  }, {} as Record<string, any>)
+  return Object.keys(fontMap).reduce(
+    (fsMap, key) => {
+      const fs = fontMap[key]
+      fsMap[key] = [
+        `${fs.fontSize}px`,
+        {
+          lineHeight: `${fs.lineHeight * fs.fontSize}px`,
+          fontWeight: `${fs.fontWeight}`,
+        },
+      ]
+      return fsMap
+    },
+    {} as Record<string, any>
+  )
 }
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./storybook/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {

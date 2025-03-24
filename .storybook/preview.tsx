@@ -1,7 +1,8 @@
 import type { Preview } from "@storybook/react"
-import { ThemeProvider } from "../src/ThemeProvider"
+import { ThemeProvider } from "../lib/ThemeProvider"
 import React from "react"
-import { defaultDarkTheme } from "../src/themes/default"
+import { defaultDarkTheme } from "../lib/themes/default"
+import "../lib/index.css"
 
 const preview: Preview = {
   parameters: {

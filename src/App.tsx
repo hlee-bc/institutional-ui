@@ -1,7 +1,11 @@
-import "./App.css"
+import { ThemeProvider, Divider } from "institutional-ui"
 
 function App() {
-  return <></>
+  return (
+    <ThemeProvider>
+      <Divider />
+    </ThemeProvider>
+  )
 }
 
 export default App
