@@ -1,33 +1,14 @@
 import "./index.css"
 
-export { ThemeProvider } from "./ThemeProvider"
-export { Button } from "./Button/Button"
-export type { ButtonProps } from "./Button/Button"
-export { Input } from "./Input/Input"
-export type { InputProps } from "./Input/Input"
-export { Empty } from "./Empty/Empty"
-export type { EmptyProps } from "./Empty/Empty"
-export { Segmented } from "./Segmented/Segmented"
-export type { SegmentedProps } from "./Segmented/Segmented"
-export { Divider } from "./Divider/Divider"
-export type { DividerProps } from "./Divider/Divider"
-export { Modal } from "./Modal/Modal"
-export type { ModalProps } from "./Modal/Modal"
-export { Select } from "./Select/Select"
-export type { SelectProps } from "./Select/Select"
-export { Table } from "./Table/Table"
-export type { TableProps } from "./Table/Table"
-export { Tabs } from "./Tabs/Tabs"
-export type { TabsProps } from "./Tabs/Tabs"
-export { WidgetLayout } from "./WidgetLayout/WidgetLayout"
-export type { WidgetLayoutProps } from "./WidgetLayout/WidgetLayout"
-export { InputNumber } from "./InputNumber/InputNumber"
-export type { InputNumberProps } from "./InputNumber/InputNumber"
-export { Progress } from "./Progress/Progress"
-export type { ProgressProps } from "./Progress/Progress"
-export { Spin } from "./Spin/Spin"
-export type { SpinProps } from "./Spin/Spin"
-export { Popover } from "./Popover/Popover"
-export type { PopoverProps } from "./Popover/Popover"
-export { Tooltip } from "./Tooltip/Tooltip"
-export type { TooltipProps } from "./Tooltip/Tooltip"
+// antd imports
+import { ConfigProvider, theme, ConfigProviderProps } from "antd"
+
+// antd stuff
+export { ConfigProvider, theme }
+export type { ConfigProviderProps }
+
+// providers
+export * from "./providers"
+
+// components
+export * from "./components"

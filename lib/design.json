@@ -81,11 +81,7 @@
       "errorMuted": "#ff3344",
       "white": "#ffffff",
       "textMuted": "#98a1b2",
-      "dark": "#b1b8c7",
-      "softWhite": "#FFFFFF40",
-      "softBlue": "#5773FD4C",
-      "ghostWhite": "#FFFFFF14",
-      "shadow": "#111a2a"
+      "dark": "#b1b8c7"
     },
     "darkMode": {
       "400": "#63676f",

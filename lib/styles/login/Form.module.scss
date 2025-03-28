@@ -1,0 +1,14 @@
+.form {
+  :global(.ant-form-item-label label) {
+    font-weight: 500 !important;
+  }
+  :global(.ant-form-item-explain) {
+    margin-bottom: 0.5rem;
+  }
+
+  &-input-otp {
+    :global(.ant-form-item-explain) {
+      padding-left: 1.5rem;
+    }
+  }
+}

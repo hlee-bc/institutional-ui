@@ -26,7 +26,6 @@ export const defaultDarkTheme: Theme["antdConfig"] = {
         defaultGhostBorderColor: "#dfe3eb",
         defaultHoverColor: design.color.base.white,
         defaultHoverBorderColor: "transparent",
-        primaryShadow: "transparent",
       },
       Menu: {
         darkItemBg: design.color.darkMode["800"],
@@ -49,9 +48,6 @@ export const defaultDarkTheme: Theme["antdConfig"] = {
       Select: {
         optionPadding: 12,
         colorBgContainer: "transparent",
-        colorTextPlaceholder: design.color.base.white,
-        optionActiveBg: design.color.base.ghostWhite,
-        optionSelectedBg: design.color.base.shadow,
       },
       Empty: {
         colorTextDescription: design.color.base.textMuted,
@@ -96,8 +92,7 @@ export const defaultDarkTheme: Theme["antdConfig"] = {
       colorErrorText: design.color.base.errorMuted,
       colorSuccessText: design.color.base.successMuted,
       colorWarningText: design.color.base.warningMuted,
-      colorTextQuaternary: design.color.base.softWhite,
-      colorSplit: design.color.base.softBlue,
+      colorSplit: "transparent",
     },
   },
 }

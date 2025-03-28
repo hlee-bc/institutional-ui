@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react"
-import { ThemeProvider } from "../lib/ThemeProvider"
+import { ThemeProvider } from "../lib/main"
 import React from "react"
 import { defaultDarkTheme } from "../lib/themes/default"
 import "../lib/index.css"
@@ -18,7 +18,7 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <ThemeProvider theme={defaultDarkTheme}>
+      <ThemeProvider theme_={defaultDarkTheme}>
         <Story />
       </ThemeProvider>
     ),

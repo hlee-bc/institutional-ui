@@ -3,13 +3,19 @@ import react from "@vitejs/plugin-react"
 import { resolve } from "path"
 import tsconfigPaths from "vite-tsconfig-paths"
 import dts from "vite-plugin-dts"
+import preserveDirectives from "rollup-preserve-directives"
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths(), dts({ rollupTypes: true })],
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    dts({ rollupTypes: true }),
+    preserveDirectives(),
+  ],
   build: {
     // library entry and output settings
     lib: {
-      entry: resolve(__dirname, "lib/main.ts"),
+      entry: resolve(__dirname, "lib/index.ts"),
       name: "institutional-ui",
       fileName: "institutional-ui",
     },
