@@ -8,6 +8,7 @@ import { useContext, useMemo } from "react"
 import { UserProviderContext } from "@/providers/UserProvider"
 import { LogoutButton } from "./LogoutButton"
 import { AvatarIcon } from "./AvatarIcon"
+import { Email } from "@/types/User"
 
 export function UserMenuFallback() {
   return (
@@ -22,7 +23,10 @@ export function UserInfo() {
   const user = useContext(UserProviderContext)
 
   const email = useMemo(() => {
-    if (user && user.emails.filter((email) => email.is_active).length > 0) {
+    if (
+      user &&
+      user.emails.filter((email: Email) => email.is_active).length > 0
+    ) {
       return user.emails[0].email
     }
   }, [user])

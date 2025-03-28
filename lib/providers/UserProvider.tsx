@@ -1,6 +1,6 @@
 "use client"
 
-import { User } from "@/types"
+import { User } from "@/types/User"
 import { createContext, ReactNode } from "react"
 
 interface Props {

@@ -3,7 +3,7 @@
 import { useLocation } from "react-router-dom"
 import { useMemo } from "react"
 import { Segmented, ConfigProvider, theme } from "antd"
-import { NavItem } from "@/types"
+import { NavItem } from "@/types/Navigation"
 
 const { useToken } = theme
 

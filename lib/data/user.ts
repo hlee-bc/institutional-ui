@@ -1,7 +1,7 @@
 import "server-only"
 
 import fromEnv from "@/utils/env.utils"
-import { User } from "@/types"
+import { User } from "@/types/User"
 import { jwtDecode } from "jwt-decode"
 
 const { oms } = fromEnv()
